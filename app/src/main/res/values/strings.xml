@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Videoteca</string>
+    <string name="ver_peliculas">Ver Peliculas</string>
+    <string name="lista_peliculas">Ver peliculas</string>
+    <string name="v_o">V.O.</string>
+    <string name="titulo">Titulo: </string>
+</resources>
