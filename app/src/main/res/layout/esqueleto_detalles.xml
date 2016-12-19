@@ -7,7 +7,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".VerDetalles"
     android:id="@+id/coordinator_layout"
-    android:background="@color/lista_detalles"
     >
 
         <android.support.design.widget.AppBarLayout

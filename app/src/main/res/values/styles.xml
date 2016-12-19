@@ -10,7 +10,7 @@
     </style>
 
     <style name="texto">
-        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textColor">@color/negro</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
 

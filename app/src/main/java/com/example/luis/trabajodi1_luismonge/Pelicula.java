@@ -9,13 +9,15 @@ public class Pelicula {
     private String titulo;
     private String genero;
     private int portada;
+    private int img_genero;
     private boolean vo;
 
-    Pelicula(String ti, String genero, int portada, boolean vo){
+    Pelicula(String ti, String genero, int portada, int img_genero){
         this.setTitulo(ti);
         this.setGenero(genero);
         this.setPortada(portada);
         this.setVo(vo);
+        this.setImg_genero(img_genero);
     }
 
 
@@ -49,5 +51,13 @@ public class Pelicula {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public int getImg_genero() {
+        return img_genero;
+    }
+
+    public void setImg_genero(int img_genero) {
+        this.img_genero = img_genero;
     }
 }

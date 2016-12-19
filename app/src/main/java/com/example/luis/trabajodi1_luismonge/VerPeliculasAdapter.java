@@ -39,13 +39,13 @@ public class VerPeliculasAdapter extends ArrayAdapter<Pelicula> {
         TextView titulo=(TextView)vista.findViewById(R.id.tvTitulo);
         TextView genero=(TextView)vista.findViewById(R.id.tvGenero);
         ImageView imagen =(ImageView)vista.findViewById(R.id.portada);
-        CheckBox vo = (CheckBox)vista.findViewById(R.id.vo);
+        ImageView img_genero =(ImageView)vista.findViewById(R.id.img_genero);
 
 
         titulo.setText(mPeli.getTitulo());
         genero.setText(mPeli.getGenero());
         imagen.setImageResource(mPeli.getPortada());
-        vo.setChecked(mPeli.isVo());
+        img_genero.setImageResource(mPeli.getImg_genero());
 
 
         return vista;

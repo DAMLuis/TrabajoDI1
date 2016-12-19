@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="16dp"
+    android:background="@color/blanco"
     tools:context="com.example.luis.trabajodi1_luismonge.VerPeliculas">
 
 
@@ -42,13 +43,12 @@
             style="@style/texto"
             />
 
-        <CheckBox
-            android:text="@string/v_o"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/vo"
-            android:clickable="false"
-            android:focusable="false" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/img_genero"
+            android:layout_gravity="center"
+            />
 
 
 

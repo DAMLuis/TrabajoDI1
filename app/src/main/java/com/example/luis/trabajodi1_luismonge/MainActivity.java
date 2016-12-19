@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Intent i = new Intent(MainActivity.this,VerPeliculas.class);
-                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
+                startActivity(i);
+              //  startActivity(i, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
 
 
             }
