@@ -1,6 +1,8 @@
 package com.example.luis.trabajodi1_luismonge;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
@@ -38,7 +40,6 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         TextView tv_masInfo;
         boolean isImageFitToScreen;
 
-
         public ViewHolder(View v){
             super(v);
 
@@ -49,8 +50,10 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             sipsosis=(TextView)v.findViewById(R.id.tvd_sipnonis);
             reparto=(TextView)v.findViewById(R.id.tvd_reparto);
             imagen =(ImageView)v.findViewById(R.id.portada);
+
             masInfo=(LinearLayout)v.findViewById(R.id.verMasInfo);
             tv_masInfo=(TextView)v.findViewById(R.id.tv_masInfo);
+
 
             //ver portada a fullscreen
             imagen.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +84,8 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             });
 
 
+
+
         }
     }
 
@@ -107,8 +112,6 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         holder.sipsosis.setText(deta.getDescripcion());
         holder.reparto.setText(deta.getReparto());
         holder.imagen.setImageResource(deta.getPortada());
-
-
 
 
 

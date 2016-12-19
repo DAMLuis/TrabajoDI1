@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.net.Uri;
+import android.provider.ContactsContract;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -34,7 +36,7 @@ public class VerDetalles extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-
+    int pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +55,10 @@ public class VerDetalles extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
 
-        //nposicion del mLisview
+        //nposicion del mListview verPeliculas
         Intent in = getIntent();
         Bundle b = in.getExtras();
-        int pos = b.getInt("pos");
+        pos = b.getInt("pos");
 
 
         //datos detalles
@@ -80,7 +82,7 @@ public class VerDetalles extends AppCompatActivity {
         video.setMediaController(mc);
         video.start();
 
-        ////full screen
+        ////full screen el videoview cuando la pantalla está horizontal
         if(getOrientation()==1){
             String url = "android.resource://com.example.luis.trabajodi1_luismonge/" + detalles.get(pos).getVideo();
             Intent i = new Intent(VerDetalles.this, VideoPlayer.class);
@@ -91,7 +93,8 @@ public class VerDetalles extends AppCompatActivity {
         }
 
 
-        //toolbar titulo
+
+        //toolbar, titulo
         mCToolbarLayout.setTitle(detalles.get(pos).getTitulo());
         mCToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
         mCToolbarLayout.setExpandedTitleColor(Color.WHITE);
@@ -106,8 +109,6 @@ public class VerDetalles extends AppCompatActivity {
 
         //llama RecycleAdapter enviar arraylist
         mAdapter = new RecycleAdapter(mContext, detalles2);
-
-        // Data bind RecyclerView with Adapter
         mRecyclerView.setAdapter(mAdapter);
 
 
