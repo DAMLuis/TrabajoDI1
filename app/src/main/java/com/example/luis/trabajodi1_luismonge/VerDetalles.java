@@ -75,6 +75,16 @@ public class VerDetalles extends AppCompatActivity {
         MediaController mc = new MediaController(this);
         video.setMediaController(mc);
 
+        ////full screen
+        if(getOrientation()==1){
+            String url = "android.resource://com.example.luis.trabajodi1_luismonge/" + detalles.get(pos).getVideo();
+            Intent i = new Intent(VerDetalles.this, VideoPlayer.class);
+            Bundle bu = new Bundle();
+            bu.putString("url", url);
+            i.putExtras(bu);
+            startActivity(i);
+        }
+
         //toolbar titulo
         mCToolbarLayout.setTitle(detalles.get(pos).getTitulo());
         mCToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
@@ -100,5 +110,14 @@ public class VerDetalles extends AppCompatActivity {
 
     public void atras(View v){
         finish();
+    }
+
+    public int getOrientation(){
+        if(getResources().getDisplayMetrics().widthPixels>getResources().getDisplayMetrics().heightPixels) {
+            return 1;
+        }
+        else{
+            return 2;
+        }
     }
 }

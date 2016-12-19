@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,35 +10,24 @@
     tools:context="com.example.luis.trabajodi1_luismonge.MainActivity"
     >
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:src="@drawable/portada"
-        android:id="@+id/imageView"
-        android:scaleType="centerCrop"
-        />
-
-
     <TextView
         android:text="@string/lista_peliculas"
         android:background="@drawable/ver_pelis"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="0dp"
         android:textSize="35sp"
         android:textColor="#fff"
         android:gravity="center"
+        android:layout_weight="2"
         android:id="@+id/tv_titulo"
+        android:layout_margin="16dp"
         />
-
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/palomitas"
-        android:scaleType="fitCenter"
-        android:layout_gravity="center"
-        />
-
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/cinta"
+        android:layout_weight="7"
+        android:id="@+id/imageView" />
 
 </LinearLayout>
