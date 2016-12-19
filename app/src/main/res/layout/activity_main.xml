@@ -30,4 +30,6 @@
         android:layout_weight="7"
         android:id="@+id/imageView" />
 
+
+
 </LinearLayout>

@@ -79,7 +79,6 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
                     ViewGroup.LayoutParams params = masInfo.getLayoutParams();
                     params.height = 900;
                     masInfo.setLayoutParams(params);
-                    tv_masInfo.setVisibility(View.INVISIBLE);
                 }
             });
 
