@@ -1,6 +1,7 @@
 package com.example.luis.trabajodi1_luismonge;
 
 import android.content.Context;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -33,6 +34,9 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         TextView sipsosis;
         TextView reparto;
         ImageView imagen;
+        LinearLayout masInfo;
+        TextView tv_masInfo;
+
 
 
         public ViewHolder(View v){
@@ -44,6 +48,19 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             sipsosis=(TextView)v.findViewById(R.id.tvd_sipnonis);
             reparto=(TextView)v.findViewById(R.id.tvd_reparto);
             imagen =(ImageView)v.findViewById(R.id.portada);
+
+            masInfo=(LinearLayout)v.findViewById(R.id.verMasInfo);
+            tv_masInfo=(TextView)v.findViewById(R.id.tv_masInfo);
+
+            tv_masInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ViewGroup.LayoutParams params = masInfo.getLayoutParams();
+                    params.height = 900;
+                    masInfo.setLayoutParams(params);
+                    tv_masInfo.setVisibility(View.INVISIBLE);
+                }
+            });
 
 
         }
@@ -66,14 +83,14 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         DetallesPelicula deta = mDataSet.get(position);
 
 
-
-
         // Set the TextView widgets text
         holder.titulo.setText(deta.getTitulo());
         holder.genero.setText(deta.getGenero());
         holder.sipsosis.setText(deta.getDescripcion());
         holder.reparto.setText(deta.getReparto());
         holder.imagen.setImageResource(deta.getPortada());
+
+
 
 
 

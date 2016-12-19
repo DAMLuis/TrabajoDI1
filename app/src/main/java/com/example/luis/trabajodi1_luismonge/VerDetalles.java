@@ -13,7 +13,9 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 import java.util.ArrayList;
@@ -71,9 +73,9 @@ public class VerDetalles extends AppCompatActivity {
         VideoView video =(VideoView)findViewById(R.id.trailer);
         Uri path = Uri.parse("android.resource://com.example.luis.trabajodi1_luismonge/" + detalles.get(pos).getVideo());
         video.setVideoURI(path);
-        video.start();
         MediaController mc = new MediaController(this);
         video.setMediaController(mc);
+        video.start();
 
         ////full screen
         if(getOrientation()==1){
@@ -103,6 +105,8 @@ public class VerDetalles extends AppCompatActivity {
 
         // Data bind RecyclerView with Adapter
         mRecyclerView.setAdapter(mAdapter);
+
+
 
 
 
