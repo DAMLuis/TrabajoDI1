@@ -26,12 +26,12 @@ public class VerPeliculas extends AppCompatActivity {
 
         peliculas= new ArrayList<>();
 
-        peliculas.add(new Pelicula("Titulo: Animales Fantasticos","Genero: Fantastico/Accion",R.drawable.animales,R.drawable.fantasy));
-        peliculas.add(new Pelicula("Titulo: Escuadrón suicida ","Genero: Thriller | Fantástico |Acción",R.drawable.escuadron,R.drawable.cienciaficcion));
-        peliculas.add(new Pelicula("Titulo: Aliados","Genero: Thriller | Drama | Romance ",R.drawable.aliados,R.drawable.thriller));
-        peliculas.add(new Pelicula("Titulo: Inferno","Genero: Thriller | Intriga",R.drawable.inferno,R.drawable.thriller));
-        peliculas.add(new Pelicula("Titulo: Un monstruo viene a verme" ,"Genero: Fantástico | Drama",R.drawable.mostruo,R.drawable.fantasy));
-        peliculas.add(new Pelicula("Titulo: Assassin's Creed ", "Genero: Aventuras | Acción | Ciencia ficción " ,R.drawable.assassin,R.drawable.aventuras));
+        peliculas.add(new Pelicula("Animales Fantasticos","Fantastico/Accion",R.drawable.animales,R.drawable.fantasy));
+        peliculas.add(new Pelicula("Escuadrón suicida ","Thriller | Fantástico |Acción",R.drawable.escuadron,R.drawable.cienciaficcion));
+        peliculas.add(new Pelicula("Aliados","Thriller | Drama | Romance ",R.drawable.aliados,R.drawable.thriller));
+        peliculas.add(new Pelicula("Inferno","Thriller | Intriga",R.drawable.inferno,R.drawable.thriller));
+        peliculas.add(new Pelicula("Un monstruo viene a verme" ,"Fantástico | Drama",R.drawable.mostruo,R.drawable.fantasy));
+        peliculas.add(new Pelicula("Assassin's Creed ", " Aventuras | Acción | Ciencia ficción " ,R.drawable.assassin,R.drawable.aventuras));
 
 
         adapter = new VerPeliculasAdapter(this, peliculas);

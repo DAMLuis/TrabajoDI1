@@ -38,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:id="@+id/tvd_titulo"
+                android:textStyle="bold"
                 style="@style/texto"
                 android:layout_marginBottom="10dp"
                 />

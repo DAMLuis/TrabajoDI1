@@ -36,11 +36,12 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         ImageView imagen;
         LinearLayout masInfo;
         TextView tv_masInfo;
-
+        boolean isImageFitToScreen;
 
 
         public ViewHolder(View v){
             super(v);
+
             // Get the widget reference from the custom layout
             mDetalles = (LinearLayout) v.findViewById(R.id.mDetalles);
             titulo=(TextView)v.findViewById(R.id.tvd_titulo);
@@ -48,10 +49,27 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             sipsosis=(TextView)v.findViewById(R.id.tvd_sipnonis);
             reparto=(TextView)v.findViewById(R.id.tvd_reparto);
             imagen =(ImageView)v.findViewById(R.id.portada);
-
             masInfo=(LinearLayout)v.findViewById(R.id.verMasInfo);
             tv_masInfo=(TextView)v.findViewById(R.id.tv_masInfo);
 
+            //ver portada a fullscreen
+            imagen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(isImageFitToScreen) {
+                        isImageFitToScreen=false;
+                        imagen.setLayoutParams(new LinearLayout.LayoutParams( LinearLayout.LayoutParams.WRAP_CONTENT, 230));
+                        imagen.setAdjustViewBounds(true);
+                    }else{
+                        isImageFitToScreen=true;
+                        imagen.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                        imagen.setScaleType(ImageView.ScaleType.FIT_XY);
+                    }
+                }
+            });
+
+
+            //mas informacion mostrar todoel texto
             tv_masInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
