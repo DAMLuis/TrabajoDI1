@@ -32,15 +32,15 @@ public class MainActivity extends AppCompatActivity {
         Typeface face = Typeface.createFromAsset(getAssets(), "fonts/AlfaSlabOne-Regular.ttf");
         tv_titulo.setTypeface(face);
 
-        Explode explode = new Explode();//transicion
-        explode.setDuration(800); // Duracion
-        getWindow().setExitTransition(explode);
+//        Explode explode = new Explode();//transicion
+//        explode.setDuration(800); // Duracion
+//        getWindow().setExitTransition(explode);
 
         tv_titulo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Animator anima = ViewAnimationUtils.createCircularReveal(view, (int) view.getWidth() / 2, (int) view.getHeight() / 2, 0, 150);
-                anima.start();
+//                Animator anima = ViewAnimationUtils.createCircularReveal(view, (int) view.getWidth() / 2, (int) view.getHeight() / 2, 0, 150);
+//                anima.start();
 
 
                 Intent i = new Intent(MainActivity.this,VerPeliculas.class);
